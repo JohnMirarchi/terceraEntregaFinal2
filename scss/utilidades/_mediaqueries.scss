@@ -1,59 +1,60 @@
 @import "../variables/variables";
+@media only screen and (min-width:300px){
 
-@media only screen and (min-width:140px){
+/* Propiedades generales Mobile */
 
-/* Propiedades del padre */
-    
-header{
-    background-color: $color-principal;
-    padding: 15px;
-    .sacarSub{
-        text-decoration: none;
-        .nombreDire{
-            font-size: 20px;
-            text-transform: uppercase;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            padding-top: 0.2rem;
-            text-align: center;
-        }
-    }
-}
-    
-    
 body{
     background-image: url("../img/fondo.jpg");
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-}
-    
-nav{
-    ul{
-        display: flex;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        li{
-            list-style:none;
+    header{
+    background-color: $color-principal;
+    padding: 15px;
+    section{
+        height: none;
+        nav{
+        ul{
+            display: flex;
+            justify-content: center;
             color: white;
             text-decoration: none;
-            padding-top: 5px;
-            &:hover{
-                background-color: #c50d2ed9;
-                padding: 5px;
-            }
-            a{
+            li{
+                list-style:none;
                 text-decoration: none;
-                text-transform: uppercase;
-                font-family: 'Montserrat', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                color: white;
-                font-size: 0.68rem;
-                font-weight:bold;
-                margin: 6px;
-            } 
+                padding-top: 8px;
+                &:hover{
+                   background-color: #c50d2ed9;
+                   padding: 5px;
+                }
+                a{
+                  text-decoration: none !important;
+                  list-style:none;
+                  text-transform: uppercase;
+                  font-family: 'Montserrat', sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+                  color: white !important;
+                  font-size: 0.7rem;
+                  font-weight:bold;
+                  margin: 4px;              
+                }
+            }
         }
     }
 }
-    
+    .sacarSub{
+        padding: 0 !important;
+        text-decoration: none !important;
+    .nombreDire{
+        padding-top: 10px !important;
+        font-size: 20px !important;
+        text-transform: uppercase !important;
+        color: white !important;
+        font-family: 'Montserrat', sans-serif !important;
+        text-align: center !important;
+    }
+}
+}
+
 main{
     .padreMain{
         @include flex1;
@@ -91,206 +92,340 @@ main{
         }        
     }
 }
-    
-/*Estilos footer*/
-    
 footer{
-    @include flex1;
     background-color: $color-principal;
+    align-content: center;
     padding: 5px;
     bottom: 0;
-    width: 100%;
     margin-top: auto;
+    justify-content: space-around;
     p{
-        padding-top: 10px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        text-transform: uppercase;
-        font-family: 'Montserrat';
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-family: 'Montserrat';
     }
-    div{
+    section{
         nav{
+            height: none;
             ul{
+                justify-content: center;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                text-decoration: none;
                 li{
+                    list-style: none; 
                     a{
-                        color: rgb(255, 255, 255);
-                        text-decoration: none;
-                        text-transform: uppercase;
-                        font-family: 'Montserrat';
-                        font-size: 10px;
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: 'Montserrat';
+                    font-size: 10px;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 15px;
                     }
                 &:hover{
                     background-color: #c50d2ed9;
                     padding: 5px;
                 }
+                padding: 8px;
                 } 
             } 
         } 
     }
 }
+}    
+
+/*Estilos Peliculas*/
     
+#formato{
+    .peliculas{
+            @include flex1;
+            align-content: center;
+            width: 340px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 10px;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: auto;
+            margin-left: auto;
+            padding-bottom: 40px;
+            .movie{
+                background-color: white;
+                width: 340px;
+                margin-bottom: 18px;
+                @include flex1;
+                img{
+                    width: 320px;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                }
+                .videoT{
+                    @include flex1;
+                    align-content: center;
+                    height: 180px;
+                    width: 300px;
+                    margin: 10px;
+                    margin-top: 5px;
+                    margin-right: auto;
+                    margin-left: auto;
+                } 
+                #botones{
+                    display: flex;
+                    background-color: $color-principal;
+                    padding: 10px;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    list-style: none;
+                    margin: auto;
+                    text-decoration: none;
+                    color: white;
+                    width: auto;
+                    height: auto;
+                    margin-right: auto;
+                    margin-left: auto;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+                p{
+                    text-align: justify;
+                    padding: 10px;
+                    color: black;
+                    background-color: #F0EBEF;
+                    float: left;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                h2{
+                    color: white;
+                    text-align: center;
+                    background-color: $color-principal;
+                    padding: 9px;
+                }
+                h3{
+                    color: white;
+                    text-align: center;
+                    background-color: $color-principal;
+                    padding: 9px;
+                }
+
+            }        
+        }
+    }
+  
+    #volverA{
+            padding-left: 90px;
+            font-family: 'Montserrat';
+            font-weight:bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+}
+
+/*Estilos Cortos*/
     
-/*Estilos Pages: Peliculas*/
-    
-.formato{
+#formato{
+    .cortos{
+            @include flex1;
+            align-content: center;
+            width: 340px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 10px;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: auto;
+            margin-left: auto;
+            padding-bottom: 40px;
+            .movie{
+                background-color: white;
+                width: 340px;
+                margin-bottom: 18px;
+                @include flex1;
+                img{
+                    width: 320px;
+                    height: auto;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                }
+                .videoT{
+                    @include flex1;
+                    align-content: center;
+                    height: 180px;
+                    width: 300px;
+                    margin: 10px;
+                    margin-top: 5px;
+                    margin-right: auto;
+                    margin-left: auto;
+                } 
+                #botones{
+                    display: flex;
+                    background-color: $color-principal;
+                    padding: 10px;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    list-style: none;
+                    margin: auto;
+                    text-decoration: none;
+                    color: white;
+                    width: auto;
+                    height: auto;
+                    margin-right: auto;
+                    margin-left: auto;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+                p{
+                    text-align: justify;
+                    padding: 10px;
+                    color: black;
+                    background-color: #F0EBEF;
+                    float: left;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                h2{
+                    color: white;
+                    text-align: center;
+                    background-color: $color-principal;
+                    padding: 9px;
+                }
+                h3{
+                    color: white;
+                    text-align: center;
+                    background-color: $color-principal;
+                    padding: 9px;
+                }
+
+            }        
+        }
+    }
+  
+    #volverA{
+            padding-left: 90px;
+            font-family: 'Montserrat';
+            font-weight:bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+}
+
+/*Estilos videoclips*/
+
+#formato{
+    margin-top: 20px;
     section{
-        .largometrajes{
-            text-align: center;
+        .movie{
+            background-color: white;
+            width: 340px;
+            margin-bottom: 18px;
+            @include flex1;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 20px;
-            width: auto;
-            font-size: 30px;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            padding-bottom: 5px;
-            font-weight:bold;
-            background-color: $color-principal;
-        }
-    .movie{
-        @include flex1;
-        align-content: center;
-        width: 340px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        background-color: white;
-        padding: 10px;
-        font-family: 'Montserrat', sans-serif;
-        margin-right: auto;
-        margin-left: auto;
-        h2{
-            color: white;
-            text-align: center;
-            background-color: $color-principal;
-            padding: 5px;
-            font-family: 'Montserrat';
-        }
-        h3{
-            color: white;
-            text-align: center;
-            background-color: $color-principal;
-            padding: 5px;
-            font-family: 'Montserrat';
-            font-size: 25px;
-        }
-        div{
-            p{
-                text-align: justify;
-                padding: 10px;
-                color: black;
-                background-color: #F0EBEF;
-            }            
             img{
                 width: 320px;
                 height: auto;
-                padding-bottom: 5px;
+                margin-left: 10px;
+                margin-top: 10px;
             }
-        }
-     }
-    .videoT{
-        @include flex1;
-        align-content: center;
-        height: auto;
-        width: auto;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        background-color: white;
-        padding: 10px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    }
-    #volverA{
-        padding-left: 110px;
-        font-family: 'Montserrat';
-        font-weight:bold;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        margin-top: 5px;
-        margin-bottom: 40px;
-    }
-}
-    
-/*Estilos Contacto*/
-    
-.cuerpo{
-    min-height: 100vh;
-    .contacto{
-        background-color: $color-principal;
-        margin-top: 35px;
-        width: 100%;
-        padding: 10px 20px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 6rem;
-        box-sizing: border-box;
-        border-radius: 5px;
-        form{
+            .videoT{
+                @include flex1;
+                align-content: center;
+                height: 180px;
+                width: 300px;
+                margin: 10px;
+                margin-top: 5px;
+                margin-right: auto;
+                margin-left: auto;
+            } 
             h2{
                 color: white;
-                margin: 10px;
+                text-align: center;
+                background-color: $color-principal;
+                padding: 9px;
                 font-family: 'Montserrat';
                 text-transform: uppercase;
-                text-align: center;
-            }            
-            input{
-                width: 100%;
-                margin-bottom: 10px;
-                padding: 5px;
-                box-sizing: border-box;
-                border: none;
-            }            
-            textarea{
-                width: 100%;
-                box-sizing: border-box;
-                border-radius: 5px;
-                border: none;
-                min-height: 100px;
-                max-height: 200px;
-            }            
-            #boton{
-                padding: 15px;
-                background-color: rgb(17, 66, 112);
-                color: white;
-                font-size: 20px;
-                &:hover{
-                    cursor: pointer;   
             }
+            h3{
+                color: white;
+                text-align: center;
+                background-color: $color-principal;
+                padding: 9px;
+                font-family: 'Montserrat';
+                text-transform: uppercase;
+            }
+
         }
     }
 }
+/*Estilos Contacto*/
+
+.contacto{
+    margin-top: 40px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight:bold;
+    background-size: 100% 100%;
+    width: 420px;
+    height: 80vh;
+    margin: auto;
+    .head{
+        background-color: #730217D9;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: -70px;
+        box-shadow: -1px 4px 20px -4px #fc4365d9;
+    }
+    .btn1{
+        background-color: #730217D9;
+        color: white;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        border-radius: 5px;
+        height: 60px;
+        width: auto;
+        padding: 5px;
+        margin-left: 30px;
+    }
+    form{
+    input{
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 150px;
+    }
 }
-    
-@media only screen and (min-width:700px){
+}
+}
+
+
+@media only screen and (min-width: 765px){
     
 body{
-    min-height: 70vh;
-}
-    
-header{
-    display: flex;
-    justify-content: space-around;
+    header{
+        padding: 10px !important;
+        display: flex !important;
+        justify-content: space-around !important;
     section{
         nav{
             ul{
                 li{
                     a{
-                        font-size: 15px;
+                        font-size: 15px !important;
                     }
                 }
             } 
         }
     }
 }
-    
 main{
-    min-height: 80vh;
     .padreMain{
         @include flex1;
-        align-content: center;
-        width: 700px;
+        width: 750px;
         margin-top: 30px;
         margin-bottom: 30px;
         background-color: white;
@@ -302,181 +437,309 @@ main{
             display: flex;
             flex-direction: row;
             p{
-                text-align: justify;
-                padding: 10px;
-                color: black;
-                background-color: #F0EBEF;
-                float: left;
-                font-size: 20px;
-                font-weight: bold;
+            text-align: justify;
+            padding: 15px;
+            color: black;
+            background-color: #F0EBEF;
+            float: left;
+            font-size: 21.1px;
+            font-weight: bold;
             }
             img{
-                padding-left: 0.9px;
-                padding-bottom: 5px;
-            }
-        }
-    }
-    }
-    
-/*Estilos Peliculas/Cortos*/
-    
-.formato{
-    section{
-        .largometrajes{
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 690px;
-            font-size: 30px;
-            color: white;
-            font-family: 'Montserrat';
-            text-transform: uppercase;
+            padding-left: 0.9px;
             padding-bottom: 5px;
-            font-weight:bold;
-            background-color: $color-principal;
-        }
-        .movie{
-            @include flex1;
-            align-content: center;
-            width: 540px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            background-color: white;
-            padding: 10px;
-            font-family: 'Montserrat', sans-serif;
-            margin-right: auto;
-            margin-left: auto;
-            h2{
-                color: white;
-                text-align: center;
-                background-color: $color-principal;
-                padding: 5px;
-                margin-bottom: 5px;
-            }
-            div{
-                p{
-                    text-align: justify;
-                    padding: 10px;
-                    color: black;
-                background-color: #F0EBEF;
-            }                
-            img{
-                display: block;
-                width: 450px;
-                height: auto;
-                padding-bottom: 5px;
-                margin-left: 40px;
-                margin-right: 40px;
             }
         }
     }
-    .videoT{
-        @include flex1;
-        align-content: center;
-        height: 280px;
-        width: 540px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        background-color: white;
-        padding: 10px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-}
-#volverA{
-    padding-left: 90px;
-    font-family: 'Montserrat';
-    font-weight:bold;
-     text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-}
-}
-            
-/*Estilos Contacto*/
-    
-.cuerpo{
-    min-height: 100vh;
-    .contacto{
-        background-color: $color-principal;
-        margin-top: 75px;
-        width: 450px;
-        padding: 10px 20px;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-        border-radius: 5px;
-        form{
-            h2{
-                color: white;
-                margin: 10px;
-                font-family: 'Montserrat';
-                text-transform: uppercase;
-                text-align: center;
-            }
-            input{
-                width: 100%;
-                margin-bottom: 10px;
-                padding: 5px;
-                box-sizing: border-box;
-                border: none;
-            }
-            textarea{
-                width: 100%;
-                box-sizing: border-box;
-                border-radius: 5px;
-                border: none;
-                min-height: 100px;
-                max-height: 200px;
-            }             
-            #boton{
-                padding: 15px;
-                background-color: rgb(17, 66, 112);
-                color: white;
-                font-size: 20px;
-                &:hover{
-                    cursor: pointer;
-                }   
-                }
-            }
-        }
-    }
-}
-}
-    
-/*Estilos footer*/
-    
-footer{
-    @include flex1;
-    justify-content: space-around;
-    bottom: 0;
-    width: 100%;
-    margin-top: 109px;
-    div{
-        nav{
-            ul{
+    } 
+    footer{
+        display: flex;
+        justify-content: space-around;
+        height: auto;
+        bottom: 0;
+        width: 100%;
+        margin-top: auto;
+        section{
+            nav{
+                ul{
                     padding: 5px;
-                li{
-                    a{
-                        font-size: 15px;
+                    li{
+                        a{
+                          font-size: 15px;
+                        }
                     }
                 }
             }
         }
     }
 }
+
+/*Estilos peliculas*/
     
-@media only screen and (min-width:760px){
-    
-.formato{
-        #volverA{
-        padding-left: 340px;
-        font-family: 'Montserrat';
-        font-weight:bold;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
+#formato{
+    .peliculas{
+            align-content: center;
+            width: 340px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 10px;
+            font-family: 'Montserrat', sans-serif;
+            margin-right: 370px;
+            padding-bottom: 40px;
+            .movie{
+                background-color: white;
+                width: 640px;
+                margin-bottom: 28px;
+                @include flex1;
+                img{
+                    width: 620px;
+                    height: auto;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                }
+                .videoT{
+                    @include flex1;
+                    align-content: center;
+                    height: 360px;
+                    width: 620px;
+                    margin: 10px;
+                    margin-top: 5px;
+                    margin-right: auto;
+                    margin-left: auto;
+                } 
+                #botones{
+                    display: flex;
+                    background-color: $color-principal;
+                    padding: 10px;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    list-style: none;
+                    margin: auto;
+                    text-decoration: none;
+                    color: white;
+                    width: auto;
+                    height: auto;
+                    margin-right: auto;
+                    margin-left: auto;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+                p{
+                    text-align: justify;
+                    padding: 14px;
+                    color: black;
+                    background-color: #F0EBEF;
+                    float: left;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                h2{
+                    color: white;
+                    text-align: center;
+                    background-color: $color-principal;
+                    padding: 9px;
+                }
+                h3{
+                    color: white;
+                    text-align: center;
+                    background-color: $color-principal;
+                    padding: 9px;
+                    font-size: 22px;
+                }
+
+            }        
+        }
     }
+  
+    #volverA{
+            padding-left: 90px;
+            font-family: 'Montserrat';
+            font-weight:bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+}
+
+/*Estilos cortos*/
+    
+#formato{
+    .cortos{
+        align-content: center;
+        width: 340px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 10px;
+        font-family: 'Montserrat', sans-serif;
+        margin-right: 370px;
+        padding-bottom: 40px;
+        .movie{
+                background-color: white;
+                width: 640px;
+                margin-bottom: 28px;
+                @include flex1;
+                img{
+                    width: 620px;
+                    height: auto;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                }
+                .videoT{
+                    @include flex1;
+                    align-content: center;
+                    height: 360px;
+                    width: 620px;
+                    margin: 10px;
+                    margin-top: 5px;
+                    margin-right: auto;
+                    margin-left: auto;
+                } 
+                #botones{
+                    display: flex;
+                    background-color: $color-principal;
+                    padding: 10px;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    list-style: none;
+                    margin: auto;
+                    text-decoration: none;
+                    color: white;
+                    width: auto;
+                    height: auto;
+                    margin-right: auto;
+                    margin-left: auto;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+                p{
+                    text-align: justify;
+                    padding: 14px;
+                    color: black;
+                    background-color: #F0EBEF;
+                    float: left;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                h2{
+                    color: white;
+                    text-align: center;
+                    background-color: $color-principal;
+                    padding: 9px;
+                }
+                h3{
+                    color: white;
+                    text-align: center;
+                    background-color: $color-principal;
+                    padding: 9px;
+                    font-size: 22px;
+                }
+
+            }        
+        }
+    }
+  
+    #volverA{
+            padding-left: 90px;
+            font-family: 'Montserrat';
+            font-weight:bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+}
+
+/*Estilos videoclips*/
+
+#formato{
+    height: 30vh;
+     section{
+        display: flex;
+        flex-direction: row;
+        margin-left: 25px;
+        .orden{
+            margin: 15px;
+        .movie{
+            background-color: white;
+            width: 340px;
+            margin-bottom: 18px;
+            @include flex1;
+            margin-left: auto;
+            margin-right: auto;
+            img{
+                width: 320px;
+                height: auto;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+            .videoT{
+                @include flex1;
+                align-content: center;
+                height: 180px;
+                width: 300px;
+                margin: 10px;
+                margin-top: 5px;
+                margin-right: auto;
+                margin-left: auto;
+            } 
+            h2{
+                color: white;
+                text-align: center;
+                background-color: $color-principal;
+                padding: 9px;
+                font-family: 'Montserrat';
+                text-transform: uppercase;
+            }
+            h3{
+                color: white;
+                text-align: center;
+                background-color: $color-principal;
+                padding: 9px;
+                font-family: 'Montserrat';
+                text-transform: uppercase;
+            }
+
+        }
+    }
+}
+}
+
+/*Estilos Contacto*/
+
+.contacto{
+    margin-top: 40px;
+    font-size: 28px;
+    color: white;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight:bold;
+    background-size: 100% 100%;
+    width: 990px;
+    height: 55vh;
+    margin-left: auto;
+    margin-right: auto;
+    .head{
+        background-color: #730217D9;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: -70px;
+        box-shadow: -1px 4px 20px -4px #fc4365d9;
+    }
+    .btn1{
+        background-color: #730217D9;
+        color: white;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        border-radius: 5px;
+        height: 60px;
+        width: auto;
+        padding: 5px;
+        margin-left: 30px;
+    }
+    form{
+    input{
+        width: 100px;
+        margin-left: 200px;
+        margin-right: 100px;
+        font-size: 150px;
+    }
+}
 }
 }
